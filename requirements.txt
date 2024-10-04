@@ -1,0 +1,8 @@
+Flask==2.3.2
+Flask-SocketIO==5.3.4
+eventlet==0.33.3
+Flask-JWT-Extended==4.4.4
+Flask-SQLAlchemy==3.0.5
+Flask-Migrate==4.0.4
+Flask-Cors==3.0.10
+python-dotenv==1.0.0
