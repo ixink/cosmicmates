@@ -1,0 +1,65 @@
+<!-- frontend/blogs.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exoplanet Blogs</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('spc.jpg');
+            background-size: cover; /* Ensures the image covers the entire background */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+            background-position: center; /* Centers the image */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exoplanet Blogs</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="blogs.html">Read Exoplanet Blogs</a>
+            <a href="explore.html">Explore Exoplanet Virtual</a>
+            <a href="login.html" id="login-link">Login</a>
+            <a href="register.html" id="register-link">Register</a>
+            <a href="#" id="logout-link" style="display:none;">Logout</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="blog-list">
+            <h2>Latest Blogs</h2>
+            <!-- Add Write Blog Button -->
+            <button id="write-blog-btn" class="option-btn">Write a Blog</button>
+            <div id="blogs-container">
+                <!-- Blogs will be dynamically inserted here -->
+            </div>
+        </section>
+        
+         <img src="Illum.png" alt="A dog on a planet Illustration" style="width:800px;height:800px;"> 
+
+        <!-- Blog Writing Modal -->
+        <div id="blog-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2>Write a New Blog</h2>
+                <form id="blog-form">
+                    <input type="text" id="blog-title" placeholder="Blog Title" required>
+                    <textarea id="blog-content" placeholder="Write your blog here..." rows="10" required></textarea>
+                    <button type="submit">Submit Blog</button>
+                </form>
+                <p id="blog-error" class="error-message"></p>
+                <p id="blog-success" class="success-message"></p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Exoplanet Explorer. All rights reserved.</p>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

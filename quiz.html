@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Mate - Quiz</title>
+    <style> 
+        /* Reset and Base Styles */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #1b1b1b;
+            color: #dcdcdc;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-image: url('bck.gif'); /* Ensure 'bck.gif' is in your project directory */
+            background-repeat: no-repeat; 
+            background-size: cover; 
+            background-attachment: fixed;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #0b3d91; 
+            padding: 20px;
+            text-align: center;
+            border-bottom: 5px solid #ffffff; 
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8em;
+            color: #ffffff;
+            font-weight: 400;
+            letter-spacing: 1.5px;
+        }
+
+        /* Navigation Styles */
+        nav {
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.1em;
+            position: relative;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+
+        nav a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #ffffff;
+            transition: width 0.3s;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -5px;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 60px 20px;
+            text-align: center;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        section h2 {
+            font-size: 2.5em;
+            color: #ffd700;
+            margin-bottom: 20px;
+        }
+
+        /* Quiz Container Styles */
+        .quiz-container {
+            background-color: #2a2a2a;
+            padding: 20px;
+            margin: 15px auto;
+            border-radius: 15px;
+            width: 80%;
+            max-width: 800px;
+            text-align: left;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        .quiz-container h3 {
+            font-size: 1.5em;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .quiz-container .question {
+            margin-bottom: 20px;
+        }
+
+        .quiz-container label {
+            display: block;
+            margin-bottom: 5px;
+            color: #b0b0b0;
+            cursor: pointer;
+        }
+
+        .quiz-container input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        /* Submit Button Styles */
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            font-size: 1.2em;
+            background-color: #0b3d91;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #1a5fc4;
+        }
+
+        /* Feedback Message Styles */
+        .feedback {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #ffd700;
+            text-align: center;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #0b3d91;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #ffffff;
+            border-top: 5px solid #ffffff;
+        }
+
+        .contact-info {
+            margin-top: 10px;
+            font-size: 1.2em;
+            color: #ffd700;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .quiz-container {
+                width: 95%;
+            }
+
+            header h1 {
+                font-size: 2.2em;
+            }
+
+            section h2 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Cosmic Mate</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="exoplanets.html">Exoplanets</a>
+            <a href="quiz.html">Quiz</a>
+        </nav>
+    </header>
+
+    <!-- Quiz Section -->
+    <section id="quiz">
+        <h2>Planetary Quiz</h2>
+        <div class="quiz-container">
+            <form id="planetQuiz">
+                <!-- Question 1 -->
+                <div class="question">
+                    <h3>1. Which planet is known as the Red Planet?</h3>
+                    <label><input type="radio" name="q1" value="A"> A. Venus</label>
+                    <label><input type="radio" name="q1" value="B"> B. Mars</label>
+                    <label><input type="radio" name="q1" value="C"> C. Jupiter</label>
+                    <label><input type="radio" name="q1" value="D"> D. Saturn</label>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="question">
+                    <h3>2. Which planet has the most moons?</h3>
+                    <label><input type="radio" name="q2" value="A"> A. Earth</label>
+                    <label><input type="radio" name="q2" value="B"> B. Jupiter</label>
+                    <label><input type="radio" name="q2" value="C"> C. Saturn</label>
+                    <label><input type="radio" name="q2" value="D"> D. Uranus</label>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="question">
+                    <h3>3. What is the largest planet in our solar system?</h3>
+                    <label><input type="radio" name="q3" value="A"> A. Earth</label>
+                    <label><input type="radio" name="q3" value="B"> B. Mars</label>
+                    <label><input type="radio" name="q3" value="C"> C. Jupiter</label>
+                    <label><input type="radio" name="q3" value="D"> D. Neptune</label>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="question">
+                    <h3>4. Which planet is closest to the Sun?</h3>
+                    <label><input type="radio" name="q4" value="A"> A. Mercury</label>
+                    <label><input type="radio" name="q4" value="B"> B. Venus</label>
+                    <label><input type="radio" name="q4" value="C"> C. Earth</label>
+                    <label><input type="radio" name="q4" value="D"> D. Mars</label>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="question">
+                    <h3>5. Which planet has the Great Red Spot?</h3>
+                    <label><input type="radio" name="q5" value="A"> A. Mars</label>
+                    <label><input type="radio" name="q5" value="B"> B. Jupiter</label>
+                    <label><input type="radio" name="q5" value="C"> C. Saturn</label>
+                    <label><input type="radio" name="q5" value="D"> D. Neptune</label>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+
+            <!-- Feedback Message -->
+            <div id="feedback" class="feedback"></div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Made for the NASA Space Apps Challenge 2024</p>
+    </footer>
+
+    <!-- JavaScript for Quiz Functionality -->
+    <script>
+        // Wait for the DOM to load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the quiz form
+            const quizForm = document.getElementById('planetQuiz');
+            const feedbackDiv = document.getElementById('feedback');
+
+            // Define correct answers
+            const correctAnswers = {
+                q1: 'B', // Mars
+                q2: 'C', // Saturn
+                q3: 'C', // Jupiter
+                q4: 'A', // Mercury
+                q5: 'B'  // Jupiter
+            };
+
+            // Handle form submission
+            quizForm.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent default form submission
+
+                let score = 0;
+                let totalQuestions = Object.keys(correctAnswers).length;
+
+                // Iterate through each question and check answers
+                for (let question in correctAnswers) {
+                    const selectedOption = document.querySelector(`input[name="${question}"]:checked`);
+                    if (selectedOption && selectedOption.value === correctAnswers[question]) {
+                        score++;
+                    }
+                }
+
+                // Check if all answers are correct
+                if (score === totalQuestions) {
+                    // Redirect to chatroom.html
+                    window.location.href = 'chatroom.html';
+                } else {
+                    // Display feedback message
+                    feedbackDiv.textContent = 'Some answers are incorrect. Please try again.';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

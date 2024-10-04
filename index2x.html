@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Mate</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #1b1b1b;
+            color: #dcdcdc;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #0b3d91; 
+            padding: 20px;
+            text-align: center;
+            border-bottom: 5px solid #ffffff; 
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8em;
+            color: #ffffff;
+            font-weight: 400;
+            letter-spacing: 1.5px;
+        }
+
+        nav {
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.1em;
+            position: relative;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+
+        nav a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #ffffff;
+            transition: width 0.3s;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -5px;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        section {
+            padding: 60px 20px;
+            text-align: center;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        section h2 {
+            font-size: 2.5em;
+            color: #ffd700;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            font-size: 1.2em;
+            margin: 20px 0;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #b0b0b0;
+        }
+
+        .myths-container, .exoplanet-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding-top: 30px;
+        }
+
+        .myth, .exoplanet {
+            background-color: #2a2a2a;
+            padding: 20px;
+            margin: 15px;
+            border-radius: 15px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        .myth:hover, .exoplanet:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        .myth img, .exoplanet img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .myth h3, .exoplanet h3 {
+            font-size: 1.8em;
+            color: #ffffff;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .myth p, .exoplanet p {
+            font-size: 1em;
+            color: #b0b0b0;
+            line-height: 1.5em;
+        }
+
+        footer {
+            background-color: #0b3d91;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #ffffff;
+            border-top: 5px solid #ffffff;
+        }
+
+        .contact-info {
+            margin-top: 10px;
+            font-size: 1.2em;
+            color: #ffd700;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image </title>
+    <style>
+        body {
+            background-image: url('bck.gif');
+            background-repeat: no-repeat; 
+            background-size: cover; 
+            background-attachment: fixed; 
+        }
+    </style>
+</head>
+<body>
+
+    
+
+
+    <section id="home">
+        <h2>Welcome to the Cosmic Mate</h2>
+        <p>The stars are open to everyone. Think beyond the space. Join us in exploring the vast universe, where every star may host new worlds. This platform provides interactive and engaging materials to learn about exoplanets, especially for those with limited access to traditional learning tools.</p>
+    </section>
+
+    <section id="about">
+        <h2>Our Mission</h2>
+        <p>We aim to make the mysteries of exoplanets accessible to everyone. Whether you're from an underserved community or just curious about space, our materials are designed to be lightweight, interactive, and available in local languages. We also focus on debunking common space myths to provide accurate information.</p>
+
+        <div class="myths-container">
+            <div class="myth">
+    
+                <h3>Myth: Space is Dark</h3>
+                <p>Reality: Space is not always dark. Most often it just needs a medium to reflect light.</p>
+            </div>
+            <div class="myth">
+                
+                <h3>Myth: Space is Empty</h3>
+                <p>Reality: Space is not completely empty. It's filled with particles, energy, and celestial bodies.</p>
+            </div>
+            <div class="myth">
+                
+                <h3>Myth: Shining Objects are Stars</h3>
+                <p>Reality: Some planets reflect light and appear to shine like stars, but they are not stars.</p>
+            </div>
+            <div class="myth">
+                
+                <h3>Myth: All Exoplanets are Like Earth</h3>
+                <p>Reality: Not all exoplanets are Earth-like. Some are called 'Super Earths' because they share similar characteristics, but many are vastly different.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="exoplanets">
+        <h2>Exoplanets Discovered in 2023-2024</h2>
+        <div class="exoplanet-container">
+            <div class="exoplanet">
+                <a href="explore.html">
+                <img src="super_earth.webp" alt="Super Earth">
+                </a>
+                <h3>Super Earth</h3>
+                <p>Discovered: 122</p>
+                <a href="quiz.html">
+                <h3 style="color: green;">Get Citizenship</h3>
+                </a>
+            </div>
+            <div class="exoplanet">
+                <img src="terrestrial.webp" alt="Terrestrial">
+                <h3>Terrestrial</h3>
+                <p>Discovered: 15</p>
+                <a href="quiz.html">
+                <h3 style="color: green;">Get Citizenship</h3>
+                </a>
+            </div>
+            <div class="exoplanet">
+                <img src="neptune_like.webp" alt="Neptune-Like">
+                <h3>Neptune-Like</h3>
+                <p>Discovered: 156</p>
+                <a href="quiz.html">
+                <h3 style="color: green;">Get Citizenship</h3>
+                </a>
+            </div>
+            <div class="exoplanet">
+                <img src="gas_giant.webp" alt="Gas Giant">
+                <h3>Gas Giant</h3>
+                <p>Discovered: 204</p>
+                <a href="quiz.html">
+                <h3 style="color: green;">Get Citizenship</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Made for the NASA Space Apps Challenge 2024</p>
+    </footer>
+
+</body>
+</html>

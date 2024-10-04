@@ -1,0 +1,48 @@
+<!-- frontend/login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Exoplanet Explorer</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('spa.jpg');
+            background-size: cover; /* Ensures the image covers the entire background */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+            background-position: center; /* Centers the image */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Login</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="blogs.html">Read Exoplanet Blogs</a>
+            <a href="explore.html">Explore Exoplanet Virtual</a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="auth-form">
+            <h2>Login to Your Account</h2>
+            <form id="login-form">
+                <input type="email" id="login-email" placeholder="Email" required>
+                <input type="password" id="login-password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p id="login-error" class="error-message"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Exoplanet Explorer. All rights reserved.</p>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

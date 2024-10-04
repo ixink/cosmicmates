@@ -1,0 +1,51 @@
+<!-- frontend/exoplanet_detail.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exoplanet Detail</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 id="planet-name">Exoplanet Name</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="blogs.html">Read Exoplanet Blogs</a>
+            <a href="explore.html">Explore Exoplanet Virtual</a>
+            <a href="login.html" id="login-link">Login</a>
+            <a href="register.html" id="register-link">Register</a>
+            <a href="#" id="logout-link" style="display:none;">Logout</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="planet-info">
+            <img id="planet-image" src="" alt="Exoplanet Image">
+            <p id="planet-story">Exoplanet Story...</p>
+        </section>
+
+        <section class="quiz-section">
+            <h2>Quiz to Enter Chatroom</h2>
+            <form id="quiz-form">
+                <!-- Quiz questions will be dynamically inserted here -->
+                <button type="submit">Submit Quiz</button>
+            </form>
+        </section>
+
+        <section class="chatroom-access" id="chatroom-access" style="display: none;">
+            <button id="enter-chatroom-btn" class="option-btn">Enter Chatroom</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Exoplanet Explorer. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.socket.io/4.5.1/socket.io.min.js"
+        integrity="sha384-XE6nOH6sK5CDpzbkMdeK1BkUFIbqmCpHoqKNtAwDFp3aLz6pIwV5g3L7Nk8zv5W5"
+        crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
