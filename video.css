@@ -1,0 +1,177 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: #000; /* Fallback background */
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+}
+
+/* Starfield Layers */
+.stars, .stars2, .stars3 {
+    position: absolute;
+    width: 200%; /* Increased width for smoother animation on smaller screens */
+    height: 200%; /* Increased height to cover mobile screens */
+    background-repeat: repeat;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-position: 0 0;
+}
+
+.stars {
+    background-image: url('assets/stars.png');
+    animation: moveStars 50s linear infinite;
+}
+
+.stars2 {
+    background-image: url('assets/stars2.png');
+    animation: moveStars 100s linear infinite;
+    opacity: 0.5;
+}
+
+.stars3 {
+    background-image: url('assets/stars3.png');
+    animation: moveStars 150s linear infinite;
+    opacity: 0.2;
+}
+
+/* Star Animation */
+@keyframes moveStars {
+    from { transform: translateY(0); }
+    to { transform: translateY(-1000px); }
+}
+
+/* Content Styling */
+.content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    backdrop-filter: blur(5px); /* Optional: Adds a subtle blur behind content */
+    overflow-y: auto; /* Allows scrolling if content overflows on smaller screens */
+}
+
+.content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Adjust heading size for smaller screens */
+@media (max-width: 768px) {
+    .content h1 {
+        font-size: 2.5em;
+    }
+}
+
+.video-container {
+    position: relative;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px #00ffff;
+    animation: zoomIn 2s ease-in-out;
+    width: 90%; /* Make video container take up more width on smaller screens */
+    max-width: 800px;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+}
+
+/* Optional Custom Play/Pause Button Styling */
+#playPauseBtn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 255, 255, 0.8);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+#playPauseBtn:hover {
+    background-color: rgba(0, 255, 255, 1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Responsive Design Enhancements */
+
+/* Tablets and Small Laptops */
+@media (max-width: 1024px) {
+    .content h1 {
+        font-size: 2.8em;
+    }
+
+    .video-container {
+        width: 85%;
+    }
+}
+
+/* Smartphones */
+@media (max-width: 480px) {
+    .content h1 {
+        font-size: 2em;
+    }
+
+    .video-container {
+        width: 95%;
+        padding: 10px;
+        box-shadow: 0 0 20px #00ffff;
+    }
+
+    /* Adjust play/pause button for smaller screens */
+    #playPauseBtn {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+
+    /* Reduce text shadow for better readability */
+    .content h1 {
+        text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff, 0 0 15px #ff00ff;
+    }
+}
+
+/* Landscape Orientation on Smartphones */
+@media (max-width: 480px) and (orientation: landscape) {
+    .content {
+        padding: 10px;
+    }
+
+    .content h1 {
+        font-size: 1.8em;
+    }
+
+    .video-container {
+        width: 100%;
+    }
+}
